@@ -1,7 +1,7 @@
 package wot.demo.eventbus_ktx.app
 
 import android.app.Application
-import wot.core.lib.eventbus_ktx.Comm
+import wot.core.lib.eventbus_ktx.EventBusLifeCycle
 
 /**
  * @Sub 附属
@@ -14,6 +14,6 @@ class App : Application() {
 
     override fun onCreate() {
         super.onCreate()
-        Comm.setContext(this)
+        EventBusLifeCycle.init(this)
     }
 }
